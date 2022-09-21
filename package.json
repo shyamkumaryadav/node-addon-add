@@ -1,0 +1,32 @@
+{
+  "name": "addon-add",
+  "version": "1.0.0",
+  "description": "sum with loop",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "rebuild": "node-gyp rebuild",
+    "compile": "tsc --build --clean && tsc",
+    "start": "tsc -w --preserveWatchOutput",
+    "test": "node --napi-modules test/test_main.js"
+  },
+  "keywords": [
+    "add",
+    "node-addon",
+    "napi"
+  ],
+  "author": "shyamkumaryadav",
+  "license": "ISC",
+  "gypfile": true,
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "typescript": "^4.8.3"
+  },
+  "dependencies": {
+    "node-addon-api": "^5.0.0"
+  }
+}
